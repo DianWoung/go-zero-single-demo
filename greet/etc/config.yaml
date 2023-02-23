@@ -1,0 +1,23 @@
+Name: go-zero-api
+Host: 0.0.0.0
+Port: 8888
+
+#数据库配置
+Database:
+  DSN: "rootAccount:Password@tcp(mysqlHost:3306)/evaluation?charset=utf8mb4&parseTime=true&loc=Asia%2FShanghai"
+  MaxOpenConn: 0
+  MaxIdleConn: 2
+  ConnMaxLifetime: 28800
+  ConnMaxIdleTime: 28800
+
+#JWT配置
+Auth:
+  AccessSecret: xhuangbinxxx #生成jwt token的密钥，最简单的方式可以使用一个uuid值。
+  AccessExpire: 86400 #jwt token有效期，单位：秒
+
+#Redis配置
+Redis:
+  Host: "127.0.0.1"
+  Port: "6379"
+  Password: ""
+  Db: 2
